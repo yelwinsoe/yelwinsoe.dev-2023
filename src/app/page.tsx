@@ -69,10 +69,10 @@ export default function Home() {
                   <p>I hope you&apos;ll take a look around my website and see what I&apos;m all about. And if you have any questions, please don&apos;t hesitate to reach out.</p>
                 </div>
                 <br />
-                <h3 className='mb-3'>Experiences</h3>
+                <h3 className='mb-3 text-white'>Experiences</h3>
                 <Link href='https://findjobs.com.sg' className={styles.exp} target='_blank'>
                   <div className={styles.expDiv}>
-                    <p>
+                    <div>
                       <div>
                         <Image src='/findjobs.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
@@ -83,7 +83,7 @@ export default function Home() {
                       </div>
                       <br />
                       <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
-                    </p>
+                    </div>
                   </div>
                 </Link>
                 <br />
