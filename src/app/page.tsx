@@ -51,7 +51,6 @@ export default function Home() {
         })
         .find(({ top, bottom }) => isBetween(scroll, top, bottom));
 
-      // console.log(position?.id)
       if (position?.id) {
         setActiveId(position?.id)
       }
