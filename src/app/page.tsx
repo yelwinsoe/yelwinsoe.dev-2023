@@ -29,7 +29,7 @@ export default function Home() {
   const isBetween = (value: number, floor: number, ceil: number) =>
   value >= floor && value <= ceil;
 
-  const [activeId, setActiveId] = useState("");
+  const [activeId, setActiveId] = useState("about");
 
   useLayoutEffect(() => {
     const ids = ['about', 'contributions', 'skills', 'blog', 'experiences', 'portfolio']
