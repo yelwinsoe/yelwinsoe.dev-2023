@@ -71,12 +71,17 @@ export default function Home() {
                 <br />
                 <h3 className='mb-3'>Experiences</h3>
                 <Link href='https://findjobs.com.sg' className={styles.exp} target='_blank'>
-                  <div>
+                  <div className={styles.expDiv}>
                     <p>
-                      <small>July 2020 - Present</small><br />
-                      <span className='text-white'>Senior Software Engineer - Team Lead</span><br />
-                      <small>Findjobs Pte Ltd</small>
-                      <br /><br />
+                      <div>
+                        <Image src='/findjobs.png' width={60} height={60} alt='Findjobs logo' />
+                        <div className={styles.expTitle}>
+                          <small>July 2020 - Present</small><br />
+                          <span className='text-white'>Senior Software Engineer - Team Lead</span><br />
+                          <small>Findjobs Pte Ltd</small>
+                        </div>
+                      </div>
+                      <br />
                       <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
                     </p>
                   </div>

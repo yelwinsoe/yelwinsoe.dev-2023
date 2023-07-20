@@ -25,13 +25,23 @@
   text-decoration: none;
 }
 
-.exp div {
+.expDiv {
   padding: 12px;
   padding-bottom: 0px;
   border-radius: 5px;
   border: 1px solid transparent;
 }
 
-.exp div:hover {
+.expDiv:hover {
   border: 1px solid rgb(148, 163, 184);
+}
+
+.expDiv img {
+  display: inline;
+}
+
+.expTitle {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
 }
