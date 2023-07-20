@@ -14,7 +14,8 @@ import {
   ProgressBar,
   Stack,
   Badge,
-  Image
+  Image,
+  Card
 } from 'react-bootstrap'
 import { useLayoutEffect, useState } from 'react'
 import Link from 'next/link'
@@ -31,8 +32,8 @@ export default function Home() {
   const [activeId, setActiveId] = useState("");
 
   useLayoutEffect(() => {
-    const ids = ['about', 'contributions', 'skills', 'experiences', 'portfolio']
-    const offset = 100
+    const ids = ['about', 'contributions', 'skills', 'blog', 'experiences', 'portfolio']
+    const offset = 10
     const listener = () => {
       const scroll = window.scrollY;
 
@@ -163,7 +164,45 @@ export default function Home() {
                     <Col><ProgressBar now={90} /></Col>
                   </Row>
                 </div>
-                <br /><br />
+                <br />
+                <h3 id='blog' className='mb-4 text-white'>Blog</h3>
+                <div className={styles.blogWrapper}>
+                  <Row>
+                    <Col>
+                      <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
+                        <Card className={styles.articles}>
+                          <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
+                          <Card.Body>
+                            <Card.Title>REST vs GraphQL — How to choose your API architecture?</Card.Title>
+                            <Card.Text>
+                            Having been working on both REST and GraphQL api, I&apos;ve accumulated a mental checklist on how to choose which one to use depending on…
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Link>
+                    </Col>
+                    <Col>
+                      <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
+                        <Card className={styles.articles}>
+                          <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
+                          <Card.Body>
+                            <Card.Title>REST vs GraphQL — How to choose your API architecture?</Card.Title>
+                            <Card.Text>
+                            Having been working on both REST and GraphQL api, I&apos;ve accumulated a mental checklist on how to choose which one to use depending on…
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Link>
+                    </Col>
+                  </Row>
+                  <br />
+                  <div style={{ textAlign: 'center' }}>
+                    <Link href='https://medium.com/@yelwinsoe' target='_blank'>
+                      <Button>View More</Button>
+                    </Link>
+                  </div>
+                </div>
+                <br />
                 <h3 id='experiences' className='mb-3 text-white'>Experiences</h3>
                 <Link href='https://findjobs.com.sg' className={styles.exp} target='_blank'>
                   <div className={styles.expDiv}>
