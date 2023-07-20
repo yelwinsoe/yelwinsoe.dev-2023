@@ -18,6 +18,7 @@ import {
 } from 'react-bootstrap'
 import { useLayoutEffect, useState } from 'react'
 import Link from 'next/link'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export default function Home() {
 
@@ -66,6 +67,9 @@ export default function Home() {
     };
   }, [])
 
+  const [showMoreExp, setShowMoreExp] = useState(false)
+  const [showMorePortfolio, setShowMorePortfolio] = useState(false)
+
   return (
     <Container className={styles.container}>
       <Row>
@@ -79,6 +83,9 @@ export default function Home() {
                   Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.
                 </p>
                 <div className='d-block d-sm-none'>
+                  <Link href='mailto:yelwinsoe.mm@gmail.com' target='_blank'>
+                    <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '24px', color: 'white' }} />
+                  </Link> &nbsp;&nbsp;
                   <Link href='https://github.com/yelwinsoe' target='_blank'>
                     <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
                   </Link> &nbsp;&nbsp;
@@ -109,6 +116,9 @@ export default function Home() {
                 </div>
                 <br /><br />
                 <div className='d-none d-sm-block'>
+                  <Link href='mailto:yelwinsoe.mm@gmail.com' target='_blank'>
+                    <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '24px', color: 'white' }} />
+                  </Link> &nbsp;&nbsp;
                   <Link href='https://github.com/yelwinsoe' target='_blank'>
                     <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
                   </Link> &nbsp;&nbsp;
@@ -120,7 +130,7 @@ export default function Home() {
               <Col md={8} className={styles.rightCol}>
                 <div id="about">
                   <p>
-                    Hi there! I&apos;m a full-stack web developer with 8 years of experience. I&apos;ve been working as a team lead since 2016, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
+                    Hi there! I&apos;m a full-stack web developer with 8+ years of experience. I&apos;ve been working as a Software Engineer since 2014, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
                   </p>
                   <p>
                     I&apos;m not one for stuffy introductions, so I&apos;ll just say this: I love coding. I love the challenge of solving problems and creating something from scratch. I also love the feeling of satisfaction when I see someone using something that I&apos;ve built. If you&apos;re looking for someone to solve your Web Development problems, I&apos;m your guy.
@@ -140,7 +150,7 @@ export default function Home() {
                     <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>NodeJs</p></Col>
+                    <Col><p>Node.Js / Express.Js / Sequelize</p></Col>
                     <Col><ProgressBar now={90} animated variant="success" /></Col>
                   </Row>
                   <Row>
@@ -148,7 +158,7 @@ export default function Home() {
                     <Col><ProgressBar now={85} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Python / Flask</p></Col>
+                    <Col><p>Python / Flask / Django</p></Col>
                     <Col><ProgressBar now={70} animated variant="success" /></Col>
                   </Row>
                   <Row>
@@ -156,8 +166,16 @@ export default function Home() {
                     <Col><ProgressBar now={60} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>MySql / Sql</p></Col>
+                    <Col><p>Java / Spring Boot</p></Col>
+                    <Col><ProgressBar now={55} animated variant="success" /></Col>
+                  </Row>
+                  <Row>
+                    <Col><p>MySql / PostgreSql / Sql</p></Col>
                     <Col><ProgressBar now={80} animated variant="success" /></Col>
+                  </Row>
+                  <Row>
+                    <Col><p>MondoDB / NoSql</p></Col>
+                    <Col><ProgressBar now={50} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>HTML</p></Col>
@@ -175,34 +193,34 @@ export default function Home() {
                     <Col xs={12} md={6}>
                       <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
                         <Card className={styles.articles}>
-                          <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
+                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
                           <Card.Body>
                             <Card.Title>REST vs GraphQL — How to choose your API architecture?</Card.Title>
                             <Card.Text>
-                            Having been working on both REST and GraphQL api, I&apos;ve accumulated a mental checklist on how to choose which one to use depending on…
+                            Having been working on both REST and GraphQL api, I&apos;ve accumulated a mental checklist on how to choose ...
                             </Card.Text>
                           </Card.Body>
                         </Card>
                       </Link>
                     </Col>
                     <Col xs={12} md={6}>
-                      <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
+                      <Link href='https://medium.com/@yelwinsoe/how-to-protect-your-api-e4b2361e9592' target='_blank'>
                         <Card className={styles.articles}>
-                          <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
+                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://cdn-images-1.medium.com/max/1600/1*QV7zf88rcxyGFWANJYm10w.jpeg" />
                           <Card.Body>
-                            <Card.Title>REST vs GraphQL — How to choose your API architecture?</Card.Title>
+                            <Card.Title>How to protect your API?</Card.Title>
                             <Card.Text>
-                            Having been working on both REST and GraphQL api, I&apos;ve accumulated a mental checklist on how to choose which one to use depending on…
+                              Have you deployed your Websites or Mobile Apps and got hit in the face with thousands dollar worth of bill from your SMS provider after a few months? Yes, i have ...
                             </Card.Text>
                           </Card.Body>
                         </Card>
                       </Link>
                     </Col>
                   </Row>
-                  <br />
+                  <br /><br />
                   <div style={{ textAlign: 'center' }}>
                     <Link href='https://medium.com/@yelwinsoe' target='_blank'>
-                      <Button>View More</Button>
+                      <Button>Show More</Button>
                     </Link>
                   </div>
                 </div>
@@ -222,7 +240,7 @@ export default function Home() {
                       <br />
                       <p>
                         <ul>
-                          <li>Lead a team of 8 software developers to deliver high-quality software on time and within budget.</li>
+                          <li>Lead a team of software developers to deliver high-quality software on time and within budget.</li>
                           <li>Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search.</li>
                           <li>Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</li>
                         </ul>
@@ -275,50 +293,58 @@ export default function Home() {
                   </div>
                 </Link>
                 <br />
-                <Link href='https://evvomedia.com' className={styles.exp} target='_blank'>
-                  <div className={styles.expDiv}>
-                    <div>
-                      <div>
-                        <Image src='/companies/evvomedia.png' width={60} height={60} alt='Findjobs logo' />
-                        <div className={styles.expTitle}>
-                          <small>Mar 2016 - May 2018</small><br />
-                          <span className='text-white'>Senior Web Developer</span><br />
-                          <small>Evvo Media Pte Ltd</small>
+                {!showMoreExp && <div style={{ textAlign: 'center' }}>
+                    <Button onClick={() => { setShowMoreExp(true) }}>Show More</Button>
+                  </div>}
+                {showMoreExp &&
+                  <>
+                    <Link href='https://evvomedia.com' className={styles.exp} target='_blank'>
+                      <div className={styles.expDiv}>
+                        <div>
+                          <div>
+                            <Image src='/companies/evvomedia.png' width={60} height={60} alt='Findjobs logo' />
+                            <div className={styles.expTitle}>
+                              <small>Mar 2016 - May 2018</small><br />
+                              <span className='text-white'>Senior Web Developer</span><br />
+                              <small>Evvo Media Pte Ltd</small>
+                            </div>
+                          </div>
+                          <br />
+                          <p>
+                            <ul>
+                              <li>Automated the recording and editing of TV footage using Ubuntu Server/FFMPEG with Nginx RTMP streaming server deployed locally/intranet and Raspberry Pi as video player, resulting in a 300% reduction in time to record and distribute footage.</li>
+                              <li>Developed a digital signage system that supports multiple content types (text, photo, video, etc.) with a flexible layout using Raspberry Pi and NodeJs.</li>
+                            </ul>
+                          </p>
                         </div>
                       </div>
-                      <br />
-                      <p>
-                        <ul>
-                          <li>Automated the recording and editing of TV footage using Ubuntu Server/FFMPEG with Nginx RTMP streaming server deployed locally/intranet and Raspberry Pi as video player, resulting in a 300% reduction in time to record and distribute footage.</li>
-                          <li>Developed a digital signage system that supports multiple content types (text, photo, video, etc.) with a flexible layout using Raspberry Pi and NodeJs.</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <br />
-                <Link href='https://novitee.com' className={styles.exp} target='_blank'>
-                  <div className={styles.expDiv}>
-                    <div>
-                      <div>
-                        <Image src='/companies/novitee.png' width={60} height={60} alt='Findjobs logo' />
-                        <div className={styles.expTitle}>
-                          <small>Dec 2014 - Jan 2016</small><br />
-                          <span className='text-white'>Web Developer</span><br />
-                          <small>Novitee Pte Ltd</small>
+                    </Link>
+                    <br />
+                    <Link href='https://novitee.com' className={styles.exp} target='_blank'>
+                      <div className={styles.expDiv}>
+                        <div>
+                          <div>
+                            <Image src='/companies/novitee.png' width={60} height={60} alt='Findjobs logo' />
+                            <div className={styles.expTitle}>
+                              <small>Dec 2014 - Jan 2016</small><br />
+                              <span className='text-white'>Web Developer</span><br />
+                              <small>Novitee Pte Ltd</small>
+                            </div>
+                          </div>
+                          <br />
+                          <p>
+                            <ul>
+                              <li>Developed and deployed a purchasing and inventory system and kitchen display system that is currently used by Foodfare Pte Ltd and Each a Cup Pte Ltd.</li>
+                            </ul>
+                          </p>
                         </div>
                       </div>
-                      <br />
-                      <p>
-                        <ul>
-                          <li>Developed and deployed a purchasing and inventory system and kitchen display system that is currently used by Foodfare Pte Ltd and Each a Cup Pte Ltd.</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </Link>
+                    </Link>
+                  </>
+                }
                 <br /><br />
                 <h3 id='portfolio'>Portfolio</h3>
+                <small>Some projects I&apos;ve involved thougout my career.</small>
                 <div className='mt-4'>
                   <Row>
                     <Col md={5}>
@@ -360,11 +386,121 @@ export default function Home() {
                     </Col>
                   </Row>
                 </div>
+                <hr />
+                <div className='mt-3'>
+                  <Row>
+                    <Col md={5}>
+                      <Image src='/projects/grabjobs_dashboard.png' width='100%' alt='GrabJobs employer dashboard' />
+                    </Col>
+                    <Col md={7}>
+                      <span className='text-white'>GrabJobs Employer Dashboard</span><br />
+                      <small>A dashboard for Employers to post jobs and manage applicants on Findjobs job portal.</small><br />
+                      <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                        <Badge pill bg="primary">JavaScript</Badge>
+                        <Badge pill bg="primary">TypeScript</Badge>
+                        <Badge pill bg="primary">NodeJs</Badge>
+                        <Badge pill bg="primary">ReactJs</Badge>
+                        <Badge pill bg="primary">Bootstrap</Badge>
+                        <Badge pill bg="primary">PostgreSql</Badge>
+                        <Badge pill bg="primary">Python</Badge>
+                      </Stack>
+                      <Link href="https://employer.grabjobs.co" className='text-white' target='_blank'>https://employer.grabjobs.co</Link>
+                    </Col>
+                  </Row>
+                </div>
+                {!showMorePortfolio && <div style={{ textAlign: 'center' }}>
+                    <br /><br />
+                    <Button onClick={() => { setShowMorePortfolio(true) }}>Show More</Button>
+                  </div>}
+                {showMorePortfolio &&
+                  <>
+                    <hr />
+                    <div className='mt-3'>
+                      <Row>
+                        <Col md={5}>
+                          <Image src='/projects/grabjobs_job_portal.png' width='100%' alt='GrabJobs Job Portal' />
+                        </Col>
+                        <Col md={7}>
+                          <span className='text-white'>GrabJobs Job Portal</span><br />
+                          <small>Jobseeker can browse and apply for jobs, as well as tracking their applications.</small><br />
+                          <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                            <Badge pill bg="primary">JavaScript</Badge>
+                            <Badge pill bg="primary">TypeScript</Badge>
+                            <Badge pill bg="primary">NodeJs</Badge>
+                            <Badge pill bg="primary">ReactJs</Badge>
+                            <Badge pill bg="primary">Bootstrap</Badge>
+                            <Badge pill bg="primary">PostgreSql</Badge>
+                          </Stack>
+                          <Link href="https://grabjobs.co" className='text-white' target='_blank'>https://grabjobs.co</Link>
+                        </Col>
+                      </Row>
+                    </div>
+                    <hr />
+                    <div className='mt-3'>
+                      <Row>
+                        <Col md={5}>
+                          <Image src='/projects/evvo_channel.png' width='100%' alt='EVVO Channel Portal' />
+                        </Col>
+                        <Col md={7}>
+                          <span className='text-white'>EVVO Channel - Video Platform</span><br />
+                          <small>Businesses can create their own video channel through EVVO channel. Be it private or public.</small><br />
+                          <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                            <Badge pill bg="primary">PHP</Badge>
+                            <Badge pill bg="primary">JavaScript</Badge>
+                            <Badge pill bg="primary">MySql</Badge>
+                            <Badge pill bg="primary">Bootstrap</Badge>
+                            <Badge pill bg="primary">Nginx / RTMP</Badge>
+                          </Stack>
+                          <Link href="https://evvochannel.tv" className='text-white' target='_blank'>https://evvochannel.tv</Link>
+                        </Col>
+                      </Row>
+                    </div>
+                    <hr />
+                    <div className='mt-3'>
+                      <Row>
+                        <Col md={5}>
+                          <Image src='/projects/purchasing-inventory-system.png' width='100%' alt='EVVO Channel Portal' />
+                        </Col>
+                        <Col md={7}>
+                          <span className='text-white'>Novitee - Purchasing & Inventory System</span><br />
+                          <small>Businesses can manage and make order for their inventory.</small><br />
+                          <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                            <Badge pill bg="primary">PHP</Badge>
+                            <Badge pill bg="primary">JavaScript</Badge>
+                            <Badge pill bg="primary">MySql</Badge>
+                            <Badge pill bg="primary">Bootstrap</Badge>
+                            <Badge pill bg="primary">Nginx / RTMP</Badge>
+                          </Stack>
+                          <Link href="https://novitee.com/solutions/purchasing" className='text-white' target='_blank'>https://novitee.com/solutions/purchasing</Link>
+                        </Col>
+                      </Row>
+                    </div>
+                    <hr />
+                    <div className='mt-3'>
+                      <Row>
+                        <Col md={5}>
+                          <Image src='/projects/kitchen-display-system.png' width='100%' alt='EVVO Channel Portal' />
+                        </Col>
+                        <Col md={7}>
+                          <span className='text-white'>Novitee - Kitchen Display System</span><br />
+                          <small>Order management system for the chef in the kitchen, help chef to be more productive.</small><br />
+                          <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                            <Badge pill bg="primary">JavaScript</Badge>
+                            <Badge pill bg="primary">WebSocket</Badge>
+                            <Badge pill bg="primary">MySql</Badge>
+                            <Badge pill bg="primary">Bootstrap</Badge>
+                            <Badge pill bg="primary">Nginx / RTMP</Badge>
+                          </Stack>
+                          <Link href="https://novitee.com/solutions/kitchen-display-system" className='text-white' target='_blank'>https://novitee.com/solutions/kitchen-display-system</Link>
+                        </Col>
+                      </Row>
+                    </div>
+                  </>
+                }
               </Col>
             </Row>
           </div>
-          <br />
-          <br />
+          <br /><br /><br />
         </Col>
       </Row>
     </Container>

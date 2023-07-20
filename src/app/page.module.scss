@@ -1,9 +1,10 @@
 .container {
   margin-top: 48px;
   padding: 0px 24px;
+  overflow-x: hidden;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .leftCol {
     height: calc(100vh - 48px);
     position: fixed;
@@ -33,7 +34,7 @@
 
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .rightCol {
     margin-left: 400px;
     min-height: 100vh;
