@@ -11,6 +11,7 @@
 .name {
   font-size: 48px;
   color: white;
+  margin-bottom: 0px;
 }
 
 .activeTab {
@@ -41,10 +42,17 @@
 
 .expDiv img {
   display: inline;
+  object-fit: cover;
 }
 
 .expTitle {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+.projectDetailsWrapper {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
 }

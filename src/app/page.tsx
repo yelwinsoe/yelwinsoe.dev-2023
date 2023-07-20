@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from './page.module.scss'
 import { Link as SLink } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +11,10 @@ import {
   Row,
   Col,
   Button,
-  ProgressBar
+  ProgressBar,
+  Stack,
+  Badge,
+  Image
 } from 'react-bootstrap'
 import { useLayoutEffect, useState } from 'react'
 import Link from 'next/link'
@@ -72,8 +75,7 @@ export default function Home() {
             <Row>
               <Col md={4} className={styles.leftCol}>
                 <h2 className={styles.name}>Ye Lwin Soe</h2>
-                <p className='fs-4'>Senior Software Engineer</p>
-                <br />
+                <p className='fs-5'>Senior Software Engineer</p>
                 <p>
                   Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.
                 </p>
@@ -88,6 +90,9 @@ export default function Home() {
                   <SLink to='skills'>
                     <Button className={activeId === 'skills' ? styles.activeTab : 'text-secondary'}>Skills</Button>
                   </SLink>
+                  <SLink to='blog'>
+                    <Button className={activeId === 'blog' ? styles.activeTab : 'text-secondary'}>Blog</Button>
+                  </SLink>
                   <SLink to='experiences'>
                     <Button className={activeId === 'experiences' ? styles.activeTab : 'text-secondary'}>Experiences</Button>
                   </SLink>
@@ -95,17 +100,13 @@ export default function Home() {
                     <Button className={activeId === 'portfolio' ? styles.activeTab : 'text-secondary'}>Portfolio</Button>
                   </SLink>
                 </div>
-                <br /><br /><br />
+                <br /><br />
                 <div>
                   <Link href='https://github.com/yelwinsoe' target='_blank'>
-                    <Button variant='link'>
-                      <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
-                    </Button>
-                  </Link>
+                    <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
+                  </Link> &nbsp;&nbsp;
                   <Link href='https://www.linkedin.com/in/yelwinsoe/' target='_blank'>
-                    <Button variant='link'>
-                      <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '24px', color: 'white' }} />
-                    </Button>
+                    <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '24px', color: 'white' }} />
                   </Link>
                 </div>
               </Col>
@@ -130,7 +131,7 @@ export default function Home() {
                 <h3 id='skills' className='mb-4 text-white'>Skills</h3>
                 <div>
                   <Row>
-                    <Col><p>Javascript / Typescript</p></Col>
+                    <Col><p>JavaScript / TypeScript</p></Col>
                     <Col><ProgressBar now={90} /></Col>
                   </Row>
                   <Row>
@@ -170,13 +171,19 @@ export default function Home() {
                       <div>
                         <Image src='/companies/findjobs.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>July 2020 - Present</small><br />
+                          <small>Jul 2020 - Present</small><br />
                           <span className='text-white'>Senior Software Engineer - Team Lead</span><br />
                           <small>Findjobs Pte Ltd</small>
                         </div>
                       </div>
                       <br />
-                      <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
+                      <p>
+                        <ul>
+                          <li>Lead a team of 8 software developers to deliver high-quality software on time and within budget.</li>
+                          <li>Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search.</li>
+                          <li>Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -187,13 +194,18 @@ export default function Home() {
                       <div>
                         <Image src='/companies/grabjobs.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>July 2020 - July 2020</small><br />
+                          <small>Mar 2019 - Jul 2020</small><br />
                           <span className='text-white'>Senior Software Engineer</span><br />
                           <small>GrabJobs Pte Ltd</small>
                         </div>
                       </div>
                       <br />
-                      <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
+                      <p>
+                        <ul>
+                          <li>Increased web traffic by 300% by implementing a search engine friendly job portal using PHP/Laravel.</li>
+                          <li>Streamlined employer subscription payment system using Stripe, resulting in a 50% increase in company revenue.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -204,13 +216,18 @@ export default function Home() {
                       <div>
                         <Image src='/companies/ntu.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>July 2020 - Present</small><br />
+                          <small>May 2018 - Mar 2019</small><br />
                           <span className='text-white'>Project Officer</span><br />
                           <small>Nanyang Technology University</small>
                         </div>
                       </div>
                       <br />
-                      <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
+                      <p>
+                        <ul>
+                          <li>Increased labeller productivity by 200% by implementing a partial pre-labelled video using SOLO v3 Real-Time Object Detection Algorithm for object labeling in Self-Driving Car Research.</li>
+                          <li>Contributed to research on creating a simulation and physical environment for testing self-driving cars.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -221,13 +238,18 @@ export default function Home() {
                       <div>
                         <Image src='/companies/evvomedia.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>July 2020 - Present</small><br />
+                          <small>Mar 2016 - May 2018</small><br />
                           <span className='text-white'>Senior Web Developer</span><br />
-                          <small>Nanyang Technology University</small>
+                          <small>Evvo Media Pte Ltd</small>
                         </div>
                       </div>
                       <br />
-                      <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
+                      <p>
+                        <ul>
+                          <li>Automated the recording and editing of TV footage using Ubuntu Server/FFMPEG with Nginx RTMP streaming server deployed locally/intranet and Raspberry Pi as video player, resulting in a 300% reduction in time to record and distribute footage.</li>
+                          <li>Developed a digital signage system that supports multiple content types (text, photo, video, etc.) with a flexible layout using Raspberry Pi and NodeJs.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -238,22 +260,68 @@ export default function Home() {
                       <div>
                         <Image src='/companies/novitee.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>July 2020 - Present</small><br />
+                          <small>Dec 2014 - Jan 2016</small><br />
                           <span className='text-white'>Web Developer</span><br />
                           <small>Novitee Pte Ltd</small>
                         </div>
                       </div>
                       <br />
-                      <p>Lead a team of up to 8 software developers to deliver high-quality software on time and within budget. Increased web traffic by 500% by implementing a search engine friendly job portal using Next.js with Server Side Rendering and integrating with Google Search. Reduced deployment time by 90% by implementing a GitHub workflow with Docker.</p>
+                      <p>
+                        <ul>
+                          <li>Developed and deployed a purchasing and inventory system and kitchen display system that is currently used by Foodfare Pte Ltd and Each a Cup Pte Ltd.</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
                 </Link>
-                <br />
+                <br /><br />
                 <h3 id='portfolio'>Portfolio</h3>
-                <div style={{ height: '100vh' }}></div>
+                <div className='mt-4'>
+                  <Row>
+                    <Col md={5}>
+                      <Image src='/projects/findjobs_dashboard.png' width='100%' alt='Findjobs employer dashboard' />
+                    </Col>
+                    <Col md={7}>
+                      <span className='text-white'>Findjobs Employer Dashboard</span><br />
+                      <small>A dashboard for Employers to post jobs and manage applicants on Findjobs job portal.</small><br />
+                      <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                        <Badge pill bg="primary">JavaScript</Badge>
+                        <Badge pill bg="primary">TypeScript</Badge>
+                        <Badge pill bg="primary">NodeJs</Badge>
+                        <Badge pill bg="primary">ReactJs</Badge>
+                        <Badge pill bg="primary">Bootstrap</Badge>
+                        <Badge pill bg="primary">PostgreSql</Badge>
+                      </Stack>
+                      <Link href="https://dashboard.findjobs.asia" className='text-white' target='_blank'>https://dashboard.findjobs.asia</Link>
+                    </Col>
+                  </Row>
+                </div>
+                <hr />
+                <div className='mt-3'>
+                  <Row>
+                    <Col md={5}>
+                      <Image src='/projects/findjobs_job_portal.png' width='100%' alt='Findjobs employer dashboard' />
+                    </Col>
+                    <Col md={7}>
+                      <span className='text-white'>Findjobs Job Portal</span><br />
+                      <small>Jobseeker can browse and apply for jobs, as well as tracking their applications.</small><br />
+                      <Stack direction="horizontal" gap={1} className='mt-2 mb-2'>
+                        <Badge pill bg="primary">JavaScript</Badge>
+                        <Badge pill bg="primary">TypeScript</Badge>
+                        <Badge pill bg="primary">NodeJs</Badge>
+                        <Badge pill bg="primary">ReactJs</Badge>
+                        <Badge pill bg="primary">Bootstrap</Badge>
+                        <Badge pill bg="primary">PostgreSql</Badge>
+                      </Stack>
+                      <Link href="https://dashboard.findjobs.asia" className='text-white' target='_blank'>https://dashboard.findjobs.asia</Link>
+                    </Col>
+                  </Row>
+                </div>
               </Col>
             </Row>
           </div>
+          <br />
+          <br />
         </Col>
       </Row>
     </Container>
