@@ -1,5 +1,4 @@
 'use client'
-// import Image from 'next/image'
 import styles from './page.module.scss'
 import { Link as SLink } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -70,38 +69,46 @@ export default function Home() {
   return (
     <Container className={styles.container}>
       <Row>
-        <Col md={{ span: 10, offset: 1 }}>
+        <Col md={{ span: 10, offset: 1 }} xs={12}>
           <div>
             <Row>
-              <Col md={4} className={styles.leftCol}>
+              <Col md={4} className={styles.leftCol} >
                 <h2 className={styles.name}>Ye Lwin Soe</h2>
                 <p className='fs-5'>Senior Software Engineer</p>
                 <p>
                   Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.
                 </p>
+                <div className='d-block d-sm-none'>
+                  <Link href='https://github.com/yelwinsoe' target='_blank'>
+                    <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
+                  </Link> &nbsp;&nbsp;
+                  <Link href='https://www.linkedin.com/in/yelwinsoe/' target='_blank'>
+                    <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '24px', color: 'white' }} />
+                  </Link>
+                </div>
                 <br />
-                <div className="d-grid gap-3">
+                <div className="d-md-grid gap-3">
                   <SLink to='about'>
-                    <Button className={activeId === 'about' ? styles.activeTab : 'text-secondary'}>About</Button>
+                    <Button className={activeId === 'about' ? styles.activeTab : 'text-secondary mr-2'}>About</Button>
                   </SLink>
                   <SLink to='contributions'>
-                    <Button className={activeId === 'contributions' ? styles.activeTab : 'text-secondary'}>Contributions</Button>
+                    <Button className={activeId === 'contributions' ? styles.activeTab : 'text-secondary mr-2'}>Contributions</Button>
                   </SLink>
                   <SLink to='skills'>
-                    <Button className={activeId === 'skills' ? styles.activeTab : 'text-secondary'}>Skills</Button>
+                    <Button className={activeId === 'skills' ? styles.activeTab : 'text-secondary mr-2'}>Skills</Button>
                   </SLink>
                   <SLink to='blog'>
-                    <Button className={activeId === 'blog' ? styles.activeTab : 'text-secondary'}>Blog</Button>
+                    <Button className={activeId === 'blog' ? styles.activeTab : 'text-secondary mr-2'}>Blog</Button>
                   </SLink>
                   <SLink to='experiences'>
-                    <Button className={activeId === 'experiences' ? styles.activeTab : 'text-secondary'}>Experiences</Button>
+                    <Button className={activeId === 'experiences' ? styles.activeTab : 'text-secondary mr-2'}>Experiences</Button>
                   </SLink>
                   <SLink to='portfolio'>
-                    <Button className={activeId === 'portfolio' ? styles.activeTab : 'text-secondary'}>Portfolio</Button>
+                    <Button className={activeId === 'portfolio' ? styles.activeTab : 'text-secondary mr-2'}>Portfolio</Button>
                   </SLink>
                 </div>
                 <br /><br />
-                <div>
+                <div className='d-none d-sm-block'>
                   <Link href='https://github.com/yelwinsoe' target='_blank'>
                     <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px', color: 'white' }} />
                   </Link> &nbsp;&nbsp;
@@ -110,15 +117,13 @@ export default function Home() {
                   </Link>
                 </div>
               </Col>
-              <Col className={styles.rightCol}>
+              <Col md={8} className={styles.rightCol}>
                 <div id="about">
                   <p>
                     Hi there! I&apos;m a full-stack web developer with 8 years of experience. I&apos;ve been working as a team lead since 2016, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
                   </p>
                   <p>
-                    I&apos;m not one for stuffy introductions, so I&apos;ll just say this: I love coding. I love the challenge of solving problems and creating something from scratch. I also love the feeling of satisfaction when I see someone using something that I&apos;ve built.
-
-                    If you&apos;re looking for someone who can build you a beautiful and functional website, I&apos;m your guy. But if you&apos;re also looking for someone who can be a fun and relaxed collaborator, then I&apos;m your guy too.
+                    I&apos;m not one for stuffy introductions, so I&apos;ll just say this: I love coding. I love the challenge of solving problems and creating something from scratch. I also love the feeling of satisfaction when I see someone using something that I&apos;ve built. If you&apos;re looking for someone to solve your Web Development problems, I&apos;m your guy.
                   </p>
                   <p>I hope you&apos;ll take a look around my website and see what I&apos;m all about. And if you have any questions, please don&apos;t hesitate to reach out.</p>
                 </div>
@@ -129,45 +134,45 @@ export default function Home() {
                 </div>
                 <br /><br />
                 <h3 id='skills' className='mb-4 text-white'>Skills</h3>
-                <div>
+                <div className={styles.skillsWrapper}>
                   <Row>
                     <Col><p>JavaScript / TypeScript</p></Col>
-                    <Col><ProgressBar now={90} /></Col>
+                    <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>NodeJs</p></Col>
-                    <Col><ProgressBar now={90} /></Col>
+                    <Col><ProgressBar now={90} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>ReactJs</p></Col>
-                    <Col><ProgressBar now={90} /></Col>
+                    <Col><ProgressBar now={85} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>Python / Flask</p></Col>
-                    <Col><ProgressBar now={70} /></Col>
+                    <Col><ProgressBar now={70} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>PHP / Laravel</p></Col>
-                    <Col><ProgressBar now={60} /></Col>
+                    <Col><ProgressBar now={60} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>MySql / Sql</p></Col>
-                    <Col><ProgressBar now={80} /></Col>
+                    <Col><ProgressBar now={80} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>HTML</p></Col>
-                    <Col><ProgressBar now={90} /></Col>
+                    <Col><ProgressBar now={90} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>CSS</p></Col>
-                    <Col><ProgressBar now={90} /></Col>
+                    <Col><ProgressBar now={80} animated variant="success" /></Col>
                   </Row>
                 </div>
                 <br />
                 <h3 id='blog' className='mb-4 text-white'>Blog</h3>
                 <div className={styles.blogWrapper}>
-                  <Row>
-                    <Col>
+                  <Row className='g-3'>
+                    <Col xs={12} md={6}>
                       <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
                         <Card className={styles.articles}>
                           <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
@@ -180,7 +185,7 @@ export default function Home() {
                         </Card>
                       </Link>
                     </Col>
-                    <Col>
+                    <Col xs={12} md={6}>
                       <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
                         <Card className={styles.articles}>
                           <Card.Img variant="top" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
@@ -351,7 +356,7 @@ export default function Home() {
                         <Badge pill bg="primary">Bootstrap</Badge>
                         <Badge pill bg="primary">PostgreSql</Badge>
                       </Stack>
-                      <Link href="https://dashboard.findjobs.asia" className='text-white' target='_blank'>https://dashboard.findjobs.asia</Link>
+                      <Link href="https://findjobs.asia" className='text-white' target='_blank'>https://findjobs.asia</Link>
                     </Col>
                   </Row>
                 </div>

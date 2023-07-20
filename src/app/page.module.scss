@@ -1,11 +1,14 @@
 .container {
   margin-top: 48px;
+  padding: 0px 24px;
 }
 
-.leftCol {
-  height: calc(100vh - 48px);
-  position: fixed;
-  width: 25%;
+@media only screen and (min-width: 768px) {
+  .leftCol {
+    height: calc(100vh - 48px);
+    position: fixed;
+    width: 400px;
+  }
 }
 
 .name {
@@ -16,13 +19,25 @@
 
 .activeTab {
   font-weight: bold;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.skillsWrapper p {
+  margin-bottom: 3px;
+}
+
+.skillsWrapper .progress-bar {
+  height: 10px;
 }
 
 
 
-.rightCol {
-  margin-left: 40%;
-  min-height: 100vh;
+@media only screen and (min-width: 768px) {
+  .rightCol {
+    margin-left: 400px;
+    min-height: 100vh;
+  }
 }
 
 .blogWrapper a {
@@ -55,8 +70,9 @@
 
 .expTitle {
   display: inline-block;
-  vertical-align: middle;
   margin-left: 10px;
+  vertical-align: middle;
+  width: 70%;
 }
 
 .projectDetailsWrapper {
