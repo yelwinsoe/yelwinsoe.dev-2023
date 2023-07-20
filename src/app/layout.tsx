@@ -8,8 +8,8 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Ye Lwin Soe',
-  description: 'Ye Lwin Soe - Personal Website',
+  title: "Ye's Personal Website",
+  description: 'Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.',
 }
 
 export default function RootLayout({
@@ -19,12 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png"/>
-      </Head>
+      </Head> */}
       <body className={inter.className}>{children}</body>
     </html>
   )
