@@ -1,0 +1,18 @@
+.container {
+  padding: 48px;
+}
+
+.leftCol {
+  height: calc(100vh - 48px);
+  position: fixed;
+  width: 30%;
+}
+
+.name {
+  font-size: 48px; 
+}
+
+.rightCol {
+  margin-left: 40%;
+  min-height: 100vh;
+}
