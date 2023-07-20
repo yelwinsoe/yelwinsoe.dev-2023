@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import GitHubCalendar from 'react-github-calendar'
 
 import {
   Container,
@@ -32,10 +33,10 @@ export default function Home() {
                     <Button variant='outline-primary' className='text-decoration-none'>About</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Skills</Button>
+                    <Button variant='link' className='text-decoration-none'>Contributions</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Contributions</Button>
+                    <Button variant='link' className='text-decoration-none'>Skills</Button>
                   </Link>
                   <Link href=''>
                     <Button variant='link' className='text-decoration-none'>Experiences</Button>
@@ -69,6 +70,16 @@ export default function Home() {
                   <p>I hope you&apos;ll take a look around my website and see what I&apos;m all about. And if you have any questions, please don&apos;t hesitate to reach out.</p>
                 </div>
                 <br />
+                <h3 className='mb-4 text-white'>Contributions</h3>
+                <div>
+                  <GitHubCalendar username='yelwinsoe' colorScheme='dark' />
+                </div>
+                <br /><br />
+                <h3 className='mb-4 text-white'>Skills</h3>
+                <div>
+                  {/* <GitHubCalendar username='yelwinsoe' colorScheme='dark' /> */}
+                </div>
+                <br /><br />
                 <h3 className='mb-3 text-white'>Experiences</h3>
                 <Link href='https://findjobs.com.sg' className={styles.exp} target='_blank'>
                   <div className={styles.expDiv}>
