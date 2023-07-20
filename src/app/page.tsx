@@ -1,95 +1,70 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+
+import {
+  Container,
+  Row,
+  Col,
+  Button
+} from 'react-bootstrap'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+    <Container className='mt-5'>
+      <Row>
+        <Col md={4}>
+          <h2>Ye Lwin Soe</h2>
+          <p>Senior Software Engineer</p>
+          <br />
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.
           </p>
-        </a>
-      </div>
-    </main>
+          <br />
+          <div className="d-grid gap-3">
+            <Link href=''>
+              <Button variant='outline-primary' className='text-decoration-none'>About</Button>
+            </Link>
+            <Link href=''>
+              <Button variant='link' className='text-decoration-none'>Skills</Button>
+            </Link>
+            <Link href=''>
+              <Button variant='link' className='text-decoration-none'>Contributions</Button>
+            </Link>
+            <Link href=''>
+              <Button variant='link' className='text-decoration-none'>Experiences</Button>
+            </Link>
+            <Link href=''>
+              <Button variant='link' className='text-decoration-none'>Portfolio</Button>
+            </Link>
+          </div>
+          <br /><br /><br />
+          <div>
+            <Link href=''>
+              <Button variant='link'>
+                <FontAwesomeIcon icon={faGithub} style={{ fontSize: '32px', color: 'white' }} />
+              </Button>
+              <Button variant='link'>
+                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '32px', color: 'white' }} />
+              </Button>
+            </Link>
+          </div>
+        </Col>
+        <Col>
+          <p>
+            Hi there! I&apos;m a full-stack web developer with 8 years of experience. I&apos;ve been working as a team lead since 2016, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
+            </p>
+          <p>
+            I&apos;m not one for stuffy introductions, so I&apos;ll just say this: I love coding. I love the challenge of solving problems and creating something from scratch. I also love the feeling of satisfaction when I see someone using something that I&apos;ve built.
+
+            If you&apos;re looking for someone who can build you a beautiful and functional website, I&apos;m your guy. But if you&apos;re also looking for someone who can be a fun and relaxed collaborator, then I&apos;m your guy too.
+          </p>
+          <p>I hope you&apos;ll take a look around my website and see what I&apos;m all about. And if you have any questions, please don&apos;t hesitate to reach out.</p>
+        </Col>
+      </Row>
+    </Container>
   )
 }
