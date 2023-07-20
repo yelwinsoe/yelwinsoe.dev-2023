@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -10,7 +10,8 @@ import {
   Container,
   Row,
   Col,
-  Button
+  Button,
+  ProgressBar
 } from 'react-bootstrap'
 
 export default function Home() {
@@ -30,19 +31,19 @@ export default function Home() {
                 <br />
                 <div className="d-grid gap-3">
                   <Link href=''>
-                    <Button variant='outline-primary' className='text-decoration-none'>About</Button>
+                    <Button className='text-secondary'>About</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Contributions</Button>
+                    <Button className={styles.activeTab}>Contributions</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Skills</Button>
+                    <Button className='text-secondary'>Skills</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Experiences</Button>
+                    <Button className='text-secondary'>Experiences</Button>
                   </Link>
                   <Link href=''>
-                    <Button variant='link' className='text-decoration-none'>Portfolio</Button>
+                    <Button className='text-secondary'>Portfolio</Button>
                   </Link>
                 </div>
                 <br /><br /><br />
@@ -77,7 +78,70 @@ export default function Home() {
                 <br /><br />
                 <h3 className='mb-4 text-white'>Skills</h3>
                 <div>
-                  {/* <GitHubCalendar username='yelwinsoe' colorScheme='dark' /> */}
+                  <Row>
+                    <Col>
+                      <p>Javascript / Typescript</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={90} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>NodeJs</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={90} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>ReactJs</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={90} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>Python / Flask</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={70} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>PHP / Laravel</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={60} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>MySql / Sql</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={80} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>HTML</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={90} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <p>CSS</p>
+                    </Col>
+                    <Col>
+                      <ProgressBar now={90} />
+                    </Col>
+                  </Row>
                 </div>
                 <br /><br />
                 <h3 className='mb-3 text-white'>Experiences</h3>

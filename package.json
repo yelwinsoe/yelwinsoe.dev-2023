@@ -26,5 +26,8 @@
     "react-dom": "18.2.0",
     "react-github-calendar": "^4.0.1",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "sass": "^1.64.0"
   }
 }
