@@ -1,18 +1,37 @@
 .container {
-  padding: 48px;
+  margin-top: 48px;
 }
 
 .leftCol {
   height: calc(100vh - 48px);
   position: fixed;
-  width: 30%;
+  width: 25%;
 }
 
 .name {
-  font-size: 48px; 
+  font-size: 48px;
+  color: white;
 }
+
+
+
 
 .rightCol {
   margin-left: 40%;
   min-height: 100vh;
+}
+
+.exp {
+  text-decoration: none;
+}
+
+.exp div {
+  padding: 12px;
+  padding-bottom: 0px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.exp div:hover {
+  border: 1px solid rgb(148, 163, 184);
 }
