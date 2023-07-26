@@ -191,9 +191,9 @@ export default function Home() {
                 <div className={styles.blogWrapper}>
                   <Row className='g-3'>
                     <Col xs={12} md={6}>
-                      <Link href='https://medium.com/@yelwinsoe/rest-vs-graphql-how-to-choose-your-api-architecture-d0000d57e789' target='_blank'>
+                      <Link href='https://blog.yelwinsoe.dev/rest-vs-graphql-how-to-choose-your-api-architecture' target='_blank'>
                         <Card className={styles.articles}>
-                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AnVauYIVYm9uTsQIRfdVBQ.jpeg" />
+                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://cdn.hashnode.com/res/hashnode/image/upload/v1690341841839/58d9b592-3ec7-4fd6-afe4-a6be39b3608a.webp?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp" />
                           <Card.Body>
                             <Card.Title>REST vs GraphQL — How to choose your API architecture?</Card.Title>
                             <Card.Text>
@@ -204,9 +204,9 @@ export default function Home() {
                       </Link>
                     </Col>
                     <Col xs={12} md={6}>
-                      <Link href='https://medium.com/@yelwinsoe/how-to-protect-your-api-e4b2361e9592' target='_blank'>
+                      <Link href='https://blog.yelwinsoe.dev/how-to-protect-your-api' target='_blank'>
                         <Card className={styles.articles}>
-                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://cdn-images-1.medium.com/max/1600/1*QV7zf88rcxyGFWANJYm10w.jpeg" />
+                          <Card.Img variant="top" height={200} style={{ objectFit: 'cover' }} src="https://cdn.hashnode.com/res/hashnode/image/upload/v1690349721766/9d0e6754-87cb-4a23-add6-501c16337bb1.webp?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp" />
                           <Card.Body>
                             <Card.Title>How to protect your API?</Card.Title>
                             <Card.Text>
@@ -219,7 +219,7 @@ export default function Home() {
                   </Row>
                   <br /><br />
                   <div style={{ textAlign: 'center' }}>
-                    <Link href='https://medium.com/@yelwinsoe' target='_blank'>
+                    <Link href='https://blog.yelwinsoe.dev' target='_blank'>
                       <Button>Show More</Button>
                     </Link>
                   </div>
