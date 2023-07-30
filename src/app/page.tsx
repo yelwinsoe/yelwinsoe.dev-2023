@@ -150,12 +150,8 @@ export default function Home() {
                     <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Node.Js / Express.Js / Sequelize</p></Col>
-                    <Col><ProgressBar now={90} animated variant="success" /></Col>
-                  </Row>
-                  <Row>
-                    <Col><p>ReactJs</p></Col>
-                    <Col><ProgressBar now={85} animated variant="success" /></Col>
+                    <Col><p>Go</p></Col>
+                    <Col><ProgressBar now={70} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>Python / Flask / Django</p></Col>
@@ -166,8 +162,12 @@ export default function Home() {
                     <Col><ProgressBar now={60} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Java / Spring Boot</p></Col>
-                    <Col><ProgressBar now={55} animated variant="success" /></Col>
+                    <Col><p>Node.Js / Express.Js / Sequelize</p></Col>
+                    <Col><ProgressBar now={90} animated variant="success" /></Col>
+                  </Row>
+                  <Row>
+                    <Col><p>ReactJs</p></Col>
+                    <Col><ProgressBar now={85} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>MySql / PostgreSql / Sql</p></Col>
