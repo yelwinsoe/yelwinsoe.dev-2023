@@ -150,16 +150,16 @@ export default function Home() {
                     <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Go</p></Col>
-                    <Col><ProgressBar now={70} animated variant="success" /></Col>
-                  </Row>
-                  <Row>
                     <Col><p>Python / Flask / Django</p></Col>
                     <Col><ProgressBar now={70} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>PHP / Laravel</p></Col>
                     <Col><ProgressBar now={60} animated variant="success" /></Col>
+                  </Row>
+                  <Row>
+                    <Col><p>Go</p></Col>
+                    <Col><ProgressBar now={50} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>Node.Js / Express.Js / Sequelize</p></Col>
