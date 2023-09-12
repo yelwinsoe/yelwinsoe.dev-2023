@@ -158,10 +158,6 @@ export default function Home() {
                     <Col><ProgressBar now={60} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Go</p></Col>
-                    <Col><ProgressBar now={50} animated variant="success" /></Col>
-                  </Row>
-                  <Row>
                     <Col><p>Node.Js / Express.Js / Sequelize</p></Col>
                     <Col><ProgressBar now={90} animated variant="success" /></Col>
                   </Row>
@@ -174,7 +170,7 @@ export default function Home() {
                     <Col><ProgressBar now={80} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>MondoDB / NoSql</p></Col>
+                    <Col><p>MongoDB / NoSql</p></Col>
                     <Col><ProgressBar now={50} animated variant="success" /></Col>
                   </Row>
                   <Row>
