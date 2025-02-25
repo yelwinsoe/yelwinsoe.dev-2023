@@ -150,7 +150,7 @@ export default function Home() {
                     <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
-                    <Col><p>Python / Flask / Django</p></Col>
+                    <Col><p>Python / FastAPI / Django</p></Col>
                     <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
