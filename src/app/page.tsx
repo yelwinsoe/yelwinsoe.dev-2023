@@ -130,7 +130,7 @@ export default function Home() {
               <Col md={8} className={styles.rightCol}>
                 <div id="about">
                   <p>
-                    Hi there! I&apos;m a full-stack web developer with 8+ years of experience. I&apos;ve been working as a Software Engineer since 2014, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
+                    Hi there! I&apos;m a full-stack web developer with more than 10 years of working experience. I&apos;ve been working as a Software Engineer since 2014, and I love building things that people can use. I&apos;m also a lifelong learner and I&apos;m always looking for new ways to improve my skills.
                   </p>
                   <p>
                     I&apos;m not one for stuffy introductions, so I&apos;ll just say this: I love coding. I love the challenge of solving problems and creating something from scratch. I also love the feeling of satisfaction when I see someone using something that I&apos;ve built. If you&apos;re looking for someone to solve your Web Development problems, I&apos;m your guy.
@@ -151,7 +151,7 @@ export default function Home() {
                   </Row>
                   <Row>
                     <Col><p>Python / Flask / Django</p></Col>
-                    <Col><ProgressBar now={70} animated variant="success" /></Col>
+                    <Col><ProgressBar now={95} animated variant="success" /></Col>
                   </Row>
                   <Row>
                     <Col><p>PHP / Laravel</p></Col>
@@ -222,13 +222,35 @@ export default function Home() {
                 </div>
                 <br />
                 <h3 id='experiences' className='mb-3 text-white'>Experiences</h3>
+                <Link href='https://gic.com.sg' className={styles.exp} target='_blank'>
+                  <div className={styles.expDiv}>
+                    <div>
+                      <div>
+                        <Image src='/companies/gic.webp' width={60} height={60} alt='GIC logo' />
+                        <div className={styles.expTitle}>
+                          <small>Oct 2023 - Present</small><br />
+                          <span className='text-white'>Full Stack Developer</span><br />
+                          <small>Government of Singapore Investment Corporation (GIC)</small>
+                        </div>
+                      </div>
+                      <br />
+                      <p>
+                        <ul>
+                          <li>Architected a micro-frontend framework that enabled integration of 10+ applications, enhancing user navigation and maintaining consistency across platforms, resulting in improved developer efficiency during cross-app updates.</li>
+                          <li>Developed a secure backend system with caching and role-based access control, reducing latency by 30%.</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+                <br />
                 <Link href='https://findjobs.com.sg' className={styles.exp} target='_blank'>
                   <div className={styles.expDiv}>
                     <div>
                       <div>
                         <Image src='/companies/findjobs.png' width={60} height={60} alt='Findjobs logo' />
                         <div className={styles.expTitle}>
-                          <small>Jul 2020 - Present</small><br />
+                          <small>Jul 2020 -  Sept 2023</small><br />
                           <span className='text-white'>Senior Software Engineer - Team Lead</span><br />
                           <small>Findjobs Pte Ltd</small>
                         </div>
