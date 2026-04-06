@@ -1,31 +1,42 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-import './globals.scss'
-
-import Head from 'next/head';
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: "Ye's Personal Website",
-  description: 'Build web stuff, frontend/backend/fullstack dev. Interested in Web3, ML/DL, sometimes too many interest.',
-}
+  title: "Ye Lwin Soe — Senior Full-Stack Developer",
+  description:
+    "Senior full-stack developer with 11 years of experience building React and Python web applications. Available for remote contract work, 25 hours per week.",
+  openGraph: {
+    title: "Ye Lwin Soe — Senior Full-Stack Developer",
+    description:
+      "11 years building React & Python web apps across fintech, recruitment, and media. Available for remote part-time contract.",
+    url: "https://yelwinsoe.dev",
+    siteName: "Ye Lwin Soe",
+    type: "website",
+  },
+  keywords: [
+    "full-stack developer",
+    "React developer",
+    "Python developer",
+    "remote contractor",
+    "senior software engineer",
+    "freelance developer",
+  ],
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/* <Head>
-        <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png"/>
-      </Head> */}
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={inter.variable}>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
