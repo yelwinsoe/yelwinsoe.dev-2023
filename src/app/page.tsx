@@ -1,12 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
-import Blog from "@/components/Blog";
-import Contributions from "@/components/Contributions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,12 +14,9 @@ export default function Home() {
       <main className="space-y-8">
         <Hero />
         <About />
-        <Skills />
         <Experience />
         <Projects />
         <Education />
-        <Blog />
-        <Contributions />
         <Contact />
       </main>
       <Footer />

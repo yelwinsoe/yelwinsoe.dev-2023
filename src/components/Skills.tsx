@@ -40,10 +40,12 @@ export default function Skills() {
     <section id="skills" className="max-w-6xl mx-auto px-6">
       <div>
         <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
-          Skills
+          Capabilities
         </h2>
-        <h3 className="text-3xl font-bold mb-2">Tools of the trade</h3>
-        <p className="text-text-tertiary text-sm mb-8">Hover around — I don&apos;t bite.</p>
+        <h3 className="text-3xl font-bold mb-2">Technical toolkit</h3>
+        <p className="text-text-tertiary text-sm mb-8">
+          A hands-on stack for building, shipping, and operating production software.
+        </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, items], i) => (

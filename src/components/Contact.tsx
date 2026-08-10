@@ -18,12 +18,12 @@ export default function Contact() {
 
         <div className="relative">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Got something interesting? Let&apos;s talk.
+            Need a senior engineer who can own delivery end to end?
           </h2>
           <p className="text-text-secondary max-w-lg mx-auto mb-8">
-            I&apos;m always up for a good challenge. If you need a senior dev who ships fast,
-            communicates clearly, and doesn&apos;t need babysitting — I&apos;m your guy.
-            25 hrs/week, fully remote, async-friendly.
+            I am based in Auckland and open to conversations now for full-time
+            senior engineering and hands-on technical lead roles starting in March
+            2027.
           </p>
 
           <a

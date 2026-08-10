@@ -1,49 +1,73 @@
-"use client";
+import { profile } from "@/data/profile";
 
-import { motion } from "framer-motion";
-import { profile, stats } from "@/data/profile";
+const coreToolkit = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Python",
+  "Node.js",
+  "PostgreSQL",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+];
 
 export default function About() {
   return (
     <section id="about" className="max-w-6xl mx-auto px-6">
-      <div>
-        <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
-          About
-        </h2>
-        <h3 className="text-3xl font-bold mb-8">The short version</h3>
+      <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
+        About
+      </h2>
+      <h3 className="text-3xl font-bold mb-10">Senior engineering, end to end</h3>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            {profile.summary.split("\n\n").map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-text-secondary leading-relaxed mb-4 last:mb-0"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
-
-          <div className="space-y-4">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                className="p-4 rounded-xl bg-bg-secondary border border-border"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <p className="text-2xl font-bold text-text-primary">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-text-tertiary">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+      <div className="grid lg:grid-cols-[1.35fr_0.8fr] gap-10 lg:gap-16">
+        <div>
+          {profile.summary.split("\n\n").map((paragraph) => (
+            <p
+              key={paragraph}
+              className="text-text-secondary leading-relaxed mb-4 last:mb-0"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
+
+        <aside className="space-y-8 lg:border-l lg:border-border lg:pl-10">
+          <div>
+            <h4 className="text-sm font-semibold text-text-primary mb-3">
+              Core toolkit
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {coreToolkit.map((technology) => (
+                <span
+                  key={technology}
+                  className="px-2.5 py-1 text-xs text-text-secondary bg-bg-secondary border border-border rounded-md"
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-text-primary mb-2">
+              Leadership
+            </h4>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              Technical direction, architecture, mentoring, code review, Agile
+              delivery, and direct stakeholder communication.
+            </p>
+          </div>
+
+          <div className="pt-5 border-t border-border">
+            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
+              New Zealand work rights
+            </p>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {profile.workRightsDetail}
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
   );

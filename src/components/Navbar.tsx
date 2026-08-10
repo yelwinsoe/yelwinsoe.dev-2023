@@ -68,10 +68,14 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <span className="ml-3 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-full">
-            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-            Available
-          </span>
+          <a
+            href="/Ye_Lwin_Soe_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-3 px-3.5 py-2 text-xs font-semibold text-white bg-accent hover:bg-accent-hover rounded-lg no-underline transition-colors"
+          >
+            View CV
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -79,6 +83,8 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 text-text-secondary hover:text-text-primary"
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -86,7 +92,10 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-bg-primary/95 backdrop-blur-xl border-b border-border">
+        <div
+          id="mobile-navigation"
+          className="md:hidden bg-bg-primary/95 backdrop-blur-xl border-b border-border"
+        >
           <div className="px-6 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
@@ -102,10 +111,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <span className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-full w-fit">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              Available for hire
-            </span>
+            <a
+              href="/Ye_Lwin_Soe_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 px-3 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-lg no-underline transition-colors text-center"
+            >
+              View CV
+            </a>
           </div>
         </div>
       )}
