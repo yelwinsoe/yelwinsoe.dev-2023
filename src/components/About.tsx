@@ -54,17 +54,8 @@ export default function About() {
               Leadership
             </h4>
             <p className="text-sm text-text-secondary leading-relaxed">
-              Technical direction, architecture, mentoring, code review, Agile
-              delivery, and direct stakeholder communication.
-            </p>
-          </div>
-
-          <div className="pt-5 border-t border-border">
-            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
-              New Zealand work rights
-            </p>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              {profile.workRightsDetail}
+              Architecture, code review, mentoring, sprint delivery, and
+              stakeholder management.
             </p>
           </div>
         </aside>

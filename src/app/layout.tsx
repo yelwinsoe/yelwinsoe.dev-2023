@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yelwinsoe.dev"),
@@ -10,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ye Lwin Soe | Senior Full-Stack Software Engineer",
     description:
-      "11+ years delivering React, TypeScript, Python, and cloud platforms across investment, recruitment, and media.",
+      "11+ years delivering React, TypeScript, Python, and AWS platforms across investment, recruitment, media, and e-commerce.",
     url: "https://yelwinsoe.dev",
     siteName: "Ye Lwin Soe",
     type: "website",
@@ -89,7 +96,8 @@ const personStructuredData = {
     "TypeScript",
     "Python",
     "Node.js",
-    "Cloud infrastructure",
+    "AWS",
+    "Kubernetes",
     "Technical leadership",
   ],
 };
@@ -100,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-NZ">
+    <html lang="en-NZ" className={inter.variable}>
       <body>
         <script
           type="application/ld+json"

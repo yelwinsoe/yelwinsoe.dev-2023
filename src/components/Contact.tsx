@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/profile";
 
@@ -21,9 +18,8 @@ export default function Contact() {
             Need a senior engineer who can own delivery end to end?
           </h2>
           <p className="text-text-secondary max-w-lg mx-auto mb-8">
-            I am based in Auckland and open to conversations now for full-time
-            senior engineering and hands-on technical lead roles starting in March
-            2027.
+            I am based in Auckland and open to conversations about senior
+            engineering and hands-on technical lead roles.
           </p>
 
           <a

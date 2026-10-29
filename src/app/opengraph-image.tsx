@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
               letterSpacing: "0.02em",
             }}
           >
-            Auckland · Full-time from March 2027
+            Auckland, New Zealand
           </div>
         </div>
 
@@ -131,7 +131,7 @@ export default function OpenGraphImage() {
             fontSize: 19,
           }}
         >
-          <div>Investment · Recruitment · Media</div>
+          <div>Investment · Recruitment · Media · E-commerce</div>
           <div style={{ color: "#cbd5e1", fontWeight: 700 }}>yelwinsoe.dev</div>
         </div>
       </div>

@@ -1,53 +1,52 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown, ChevronUp, Building2 } from "lucide-react";
+import { Building2, LockKeyhole } from "lucide-react";
 import Image from "next/image";
 import { experiences } from "@/data/profile";
 
 export default function Experience() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
-  const recentExperience = experiences.slice(0, 3);
-  const earlierExperience = experiences.slice(3);
+  const recentExperience = experiences.filter((experience) => experience.impact);
+  const earlierExperience = experiences.filter((experience) => !experience.impact);
 
   return (
     <section id="experience" className="max-w-6xl mx-auto px-6">
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
           <h2 className="text-sm font-medium text-accent uppercase tracking-wider mb-2">
             Experience
           </h2>
-          <h3 className="text-3xl font-bold">Recent roles</h3>
+          <h3 className="text-3xl font-bold mb-2">Recent roles and impact</h3>
+          <p className="text-text-secondary max-w-2xl">
+            The problems I owned in my last three roles, and what changed as a
+            result.
+          </p>
         </div>
-        <a
-          href="/Ye_Lwin_Soe_CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm font-medium text-accent hover:text-accent-hover no-underline"
-        >
-          View complete CV →
-        </a>
+        <div className="flex flex-col gap-2 md:items-end">
+          <a
+            href="/Ye_Lwin_Soe_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-accent hover:text-accent-hover no-underline w-fit"
+          >
+            View complete CV →
+          </a>
+          <p className="inline-flex items-center gap-2 text-xs text-text-tertiary w-fit">
+            <LockKeyhole size={13} className="text-accent" aria-hidden="true" />
+            Commercial details kept confidential
+          </p>
+        </div>
       </div>
 
-      <div className="space-y-3">
-        {recentExperience.map((experience, index) => {
-          const isExpanded = expandedIndex === index;
-          const panelId = `experience-panel-${index}`;
+      <div className="space-y-5">
+        {recentExperience.map((experience) => {
+          const impact = experience.impact!;
 
           return (
             <article
               key={`${experience.company}-${experience.period}`}
-              className="rounded-xl bg-bg-secondary border border-border overflow-hidden"
+              className="p-6 md:p-8 rounded-xl bg-bg-secondary border border-border"
             >
-              <button
-                type="button"
-                onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                className="w-full text-left p-5 md:p-6 cursor-pointer hover:bg-bg-tertiary/30 transition-colors"
-                aria-expanded={isExpanded}
-                aria-controls={panelId}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-start gap-4">
+              <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-12">
+                <div>
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-10 h-10 rounded-lg bg-bg-tertiary flex items-center justify-center shrink-0 overflow-hidden">
                       {experience.logo ? (
                         <Image
@@ -77,31 +76,44 @@ export default function Experience() {
                       </p>
                     </div>
                   </div>
-                  <span className="text-text-tertiary shrink-0 mt-1" aria-hidden="true">
-                    {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-                  </span>
-                </div>
-              </button>
 
-              {isExpanded && (
-                <div id={panelId} className="px-5 md:px-6 pb-5 md:pb-6">
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-sm text-text-secondary mb-3 leading-relaxed">
-                      {experience.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {experience.highlights.map((highlight) => (
-                        <li
-                          key={highlight}
-                          className="text-sm text-text-secondary pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent/50"
-                        >
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <p className="text-xl font-bold text-text-primary mb-3">
+                    {impact.title}
+                  </p>
+                  <p className="text-sm text-text-secondary leading-relaxed mb-6">
+                    {impact.challenge}
+                  </p>
+
+                  <dl className="grid grid-cols-3 gap-3 sm:gap-4">
+                    {impact.outcomes.map((outcome) => (
+                      <div key={outcome.label} className="min-w-0 flex flex-col">
+                        <dt className="order-2 text-xs text-text-tertiary leading-snug mt-1">
+                          {outcome.label}
+                        </dt>
+                        <dd className="order-1 text-base sm:text-lg font-bold text-text-primary leading-tight">
+                          {outcome.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
                 </div>
-              )}
+
+                <div className="flex flex-col lg:border-l lg:border-border lg:pl-12">
+                  <ul className="space-y-3 mb-6">
+                    {experience.highlights.map((highlight) => (
+                      <li
+                        key={highlight}
+                        className="text-sm text-text-secondary leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent/50"
+                      >
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-auto text-xs text-text-tertiary leading-relaxed border-t border-border pt-4">
+                    {impact.tech.join(" · ")}
+                  </p>
+                </div>
+              </div>
             </article>
           );
         })}

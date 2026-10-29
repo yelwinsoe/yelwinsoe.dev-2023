@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import { education } from "@/data/profile";
 
@@ -15,17 +12,13 @@ export default function Education() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {education.map((edu, i) => (
-            <motion.div
+            <div
               key={i}
               className={`p-6 rounded-xl bg-bg-secondary border transition-colors ${
                 edu.current
                   ? "border-accent/30"
                   : "border-border hover:border-border-hover"
               }`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              viewport={{ once: true }}
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-10 h-10 rounded-lg bg-bg-tertiary flex items-center justify-center">
@@ -53,7 +46,7 @@ export default function Education() {
               <p className="text-xs text-text-tertiary">
                 {edu.period}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

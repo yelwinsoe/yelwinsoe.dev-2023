@@ -2,23 +2,18 @@ export const profile = {
   name: "Ye Lwin Soe",
   title: "Senior Full-Stack Software Engineer",
   tagline:
-    "11+ years delivering scalable React, TypeScript, Python, and cloud platforms across investment, recruitment, and media.",
+    "11+ years shipping production platforms across investment, recruitment, media, and e-commerce, most recently at GIC, one of the world’s largest sovereign wealth funds.",
   location: "Auckland, New Zealand",
   email: "yelwinsoe.mm@gmail.com",
   github: "https://github.com/yelwinsoe",
   linkedin: "https://www.linkedin.com/in/yelwinsoe",
   website: "https://yelwinsoe.dev",
   blog: "https://blog.yelwinsoe.dev",
-  availability: "Full-time from March 2027",
-  workRightsShort:
-    "Post Study Work Visa planned after graduation; availability is subject to approval, with open work rights once granted.",
-  workRightsDetail:
-    "After completing my AUT master’s in January 2027, I expect to be eligible to apply for a Post Study Work Visa. The PSWV provides open work rights once granted and does not require employer sponsorship.",
-  summary: `I am a senior full-stack software engineer with 11+ years of experience delivering production platforms across investment, recruitment, and media. My core stack is React and TypeScript on the frontend, with Python or Node.js services, relational databases, and cloud infrastructure behind them.
+  summary: `I am a senior full-stack engineer with 11+ years shipping production platforms across investment, recruitment, media, and e-commerce, most recently at GIC, one of the world’s largest sovereign wealth funds.
 
-I work best with end-to-end ownership: understanding the business problem, shaping the technical approach, shipping the solution, and keeping it reliable in production. I have contributed as a senior individual engineer, led delivery teams, mentored developers, and partnered directly with analysts, product managers, designers, and commercial stakeholders.
+I work deep in React and TypeScript, Python, and AWS, from frontend architecture and API design through CI/CD and Kubernetes infrastructure, with a record of measurable gains in performance, reliability, and release speed. As a former engineering lead and startup CTO, I am used to owning architecture, delivery, and stakeholder relationships end to end.
 
-Now based in Auckland, I am completing a Master of Applied Finance at AUT in January 2027. It adds financial-domain depth to my engineering background, particularly for investment and fintech platforms. I am targeting full-time senior software engineer or hands-on technical lead roles from March 2027, subject to Post Study Work Visa approval.`,
+Now based in Auckland, my Master of Applied Finance at AUT adds financial-domain depth to my engineering background, and I am interested in senior software engineer and hands-on technical lead roles.`,
 };
 
 export const stats = [
@@ -29,34 +24,49 @@ export const stats = [
 ];
 
 export const skills = {
-  Frontend: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
-  Backend: [
-    "Python",
-    "FastAPI",
-    "Django",
-    "Node.js",
-    "Express.js",
-    "PHP",
-    "Laravel",
+  Frontend: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Micro-frontends",
+    "HTML/CSS",
   ],
-  "Cloud & DevOps": [
+  Backend: [
+    "Python (FastAPI, Django)",
+    "Node.js (Express)",
+    "PHP/Laravel",
+    "REST",
+    "GraphQL",
+    "Stripe",
+  ],
+  Data: ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Pandas", "NumPy"],
+  "Cloud & Delivery": [
     "AWS",
     "Google Cloud",
-    "Docker",
     "Kubernetes",
-    "CI/CD",
+    "Docker",
     "GitHub Actions",
     "Jenkins",
+    "Nginx",
+    "ELK",
+    "Prometheus",
   ],
-  Databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
-  Methodologies: [
-    "REST APIs",
-    "GraphQL",
-    "Microservices",
-    "Agile / Scrum",
-    "TDD",
+  Leadership: [
+    "Architecture",
+    "Code review",
+    "Mentoring",
+    "Sprint delivery",
+    "Stakeholder management",
   ],
 };
+
+export interface Impact {
+  title: string;
+  challenge: string;
+  outcomes: { value: string; label: string }[];
+  tech: string[];
+}
 
 export interface Experience {
   company: string;
@@ -64,8 +74,8 @@ export interface Experience {
   period: string;
   location: string;
   logo: string;
-  description: string;
   highlights: string[];
+  impact?: Impact;
 }
 
 export const experiences: Experience[] = [
@@ -75,13 +85,22 @@ export const experiences: Experience[] = [
     period: "Oct 2023 — Mar 2026",
     location: "Singapore",
     logo: "/companies/gic.webp",
-    description:
-      "Built and maintained internal web tools used by investment teams daily, working across a React frontend and Python backend stack.",
     highlights: [
-      "30% faster APIs — reduced response times on data-heavy financial dashboards by building a Python backend with Redis caching and role-based access control.",
-      "10+ apps unified — built a React micro-frontend framework that brought together separate investment and analytics tools into one platform.",
-      "Worked directly with analysts, designers, and project managers to scope and deliver features end-to-end.",
+      "Led development of a React micro-frontend framework connecting 10+ investment and analytics applications, so product teams could build and release independently without coordinated deployments.",
+      "Built Python services with Redis caching and role-based access control, cutting API response times by 30% on data-heavy financial dashboards while enforcing fine-grained access to sensitive investment data.",
+      "Partnered with investment analysts, designers, and project managers to turn complex requirements into intuitive internal tools, owning features from requirements through production.",
     ],
+    impact: {
+      title: "Unifying investment applications",
+      challenge:
+        "Investment and analytics teams at one of the world’s largest sovereign wealth funds relied on separate tools that needed a consistent experience without losing independent deployment ownership.",
+      outcomes: [
+        { value: "10+", label: "applications unified" },
+        { value: "30%", label: "faster API responses" },
+        { value: "1 platform", label: "consistent user experience" },
+      ],
+      tech: ["React", "TypeScript", "Python", "Redis", "Micro-frontends", "RBAC"],
+    },
   },
   {
     company: "Findjobs",
@@ -89,14 +108,23 @@ export const experiences: Experience[] = [
     period: "Jul 2020 — Sep 2023",
     location: "Singapore",
     logo: "/companies/findjobs.png",
-    description:
-      "Led the engineering team and owned the technical direction for a Singapore-based job portal, working primarily in React, Node.js, and AWS.",
     highlights: [
-      "90% faster builds - rebuilt the CI/CD pipeline using GitHub Actions and Docker, cutting build times from over 2 hours to under 20 minutes.",
-      "500% traffic growth - re-architected the job portal frontend in Next.js with server-side rendering, substantially improving search visibility.",
-      "More reliable releases - designed AWS infrastructure using Kubernetes and Docker, addressing recurring causes of deployment outages.",
-      "Led sprints, made architectural decisions, reviewed code, and stayed hands-on throughout.",
+      "Led the engineering team while staying hands-on across architecture, sprint delivery, code review, and production operations.",
+      "Rebuilt CI/CD with GitHub Actions and Docker, cutting build time from 2+ hours to under 20 minutes and enabling on-demand releases.",
+      "Re-architected the job portal with Next.js server-side rendering; organic search traffic grew 500% over the following year.",
+      "Designed Kubernetes-based AWS infrastructure that removed recurring sources of deployment outages.",
     ],
+    impact: {
+      title: "Modernising delivery and organic growth",
+      challenge:
+        "A growing recruitment platform needed faster releases, better search visibility, and infrastructure that could support dependable product delivery.",
+      outcomes: [
+        { value: "<20 min", label: "build time, down from 2+ hours" },
+        { value: "500%", label: "organic search growth" },
+        { value: "On demand", label: "release capability" },
+      ],
+      tech: ["Next.js", "TypeScript", "Node.js", "AWS", "Docker", "Kubernetes"],
+    },
   },
   {
     company: "GrabJobs",
@@ -104,25 +132,31 @@ export const experiences: Experience[] = [
     period: "Mar 2019 — Jul 2020",
     location: "Singapore",
     logo: "/companies/grabjobs.png",
-    description:
-      "Senior engineer on a fast-growing recruitment platform, focused on scaling the frontend architecture and improving platform reliability.",
     highlights: [
-      "300% traffic handled - scaled the platform by redesigning the SSR architecture in Next.js and migrating to microservices.",
-      "50% revenue increase - built and integrated a Stripe subscription system for employer accounts.",
-      "20% less downtime - overhauled logging and monitoring with ELK and Prometheus.",
+      "Supported 300% web traffic growth by redesigning the Next.js rendering architecture and splitting services out of the monolith.",
+      "Built Stripe employer subscriptions, including failed-payment and billing edge cases, contributing to a 50% revenue increase.",
+      "Overhauled logging and monitoring with ELK and Prometheus, reducing unplanned downtime by 20%.",
     ],
+    impact: {
+      title: "Scaling traffic, revenue, and reliability",
+      challenge:
+        "A fast-growing recruitment platform needed to scale web traffic, introduce employer subscriptions, and improve production visibility.",
+      outcomes: [
+        { value: "300%", label: "traffic growth supported" },
+        { value: "50%", label: "revenue increase contributed to" },
+        { value: "20%", label: "less unplanned downtime" },
+      ],
+      tech: ["Next.js", "React", "Node.js", "Stripe", "ELK", "Prometheus"],
+    },
   },
   {
     company: "BitsGreat",
-    role: "Co-Founder / CTO",
+    role: "Co-Founder / CTO (concurrent, part-time)",
     period: "Jun 2018 — Sep 2019",
     location: "Singapore",
     logo: "",
-    description:
-      "Co-founded an e-commerce platform that turned customer photos into pixelated art kits. Built everything solo and managed the business alongside writing code.",
     highlights: [
-      "Built the full platform from scratch using React and Python, including payment integration and AWS infrastructure.",
-      "Owned all technical decisions alongside product direction, vendor relationships, and customer support.",
+      "Took an e-commerce product from concept to international customers, owning the React/Python platform, payments, AWS hosting, and technical direction.",
     ],
   },
   {
@@ -131,11 +165,8 @@ export const experiences: Experience[] = [
     period: "May 2018 — Mar 2019",
     location: "Singapore",
     logo: "/companies/ntu.png",
-    description:
-      "Worked on a self-driving car research project, building Python tools to speed up the video annotation pipeline.",
     highlights: [
-      "200% throughput gain - built a Python automation tool using a SOLO-based computer vision model to pre-label training videos.",
-      "Designed a partial pre-labelling technique that maintained annotation accuracy while significantly cutting manual effort.",
+      "Built a Python computer-vision labelling tool with partial pre-labelling, raising annotation throughput 200% across 500+ videos a week.",
     ],
   },
   {
@@ -144,25 +175,18 @@ export const experiences: Experience[] = [
     period: "Mar 2016 — May 2018",
     location: "Singapore",
     logo: "/companies/evvomedia.png",
-    description:
-      "Built internal tools and streaming infrastructure for a media production company.",
     highlights: [
-      "Up to 5x faster processing - automated video recording and editing workflows using Python and FFmpeg.",
-      "50% lower latency - built a live streaming solution using FFmpeg and Nginx RTMP.",
+      "Automated video recording and editing with Python and FFmpeg, up to 5x faster and removing hours of daily manual work; built a low-latency Nginx RTMP streaming solution that cut delivery latency by 50%.",
     ],
   },
   {
     company: "Novitee",
-    role: "Web Developer / Senior Web Developer",
+    role: "Web Developer, promoted to Senior Web Developer",
     period: "Dec 2014 — Jan 2016",
     location: "Yangon, Myanmar",
     logo: "/companies/novitee.png",
-    description:
-      "Built internal business tools for a company operating across multiple restaurant and retail outlets.",
     highlights: [
-      "Promoted to Senior Web Developer after the first year.",
-      "15 minutes saved per shift - built a mobile-optimised kitchen display system that replaced paper-based order tracking.",
-      "15+ hours saved per week - developed a cloud-based POS system integrated with inventory and accounting tools.",
+      "Built a cloud POS integrated with inventory and accounting, saving 15+ hours of manual data entry a week, and a mobile kitchen display system that replaced paper order tracking.",
     ],
   },
 ];
@@ -173,80 +197,6 @@ export interface Project {
   image: string;
   tech: string[];
 }
-
-export interface CaseStudy {
-  company: string;
-  title: string;
-  role: string;
-  challenge: string;
-  ownership: string;
-  approach: string[];
-  outcomes: { value: string; label: string }[];
-  tech: string[];
-}
-
-export const caseStudies: CaseStudy[] = [
-  {
-    company: "Findjobs",
-    title: "Modernising delivery and organic growth",
-    role: "Lead Software Developer · Singapore · 2020–2023",
-    challenge:
-      "A growing recruitment platform needed faster releases, better search visibility, and infrastructure that could support dependable product delivery.",
-    ownership:
-      "Led technical direction while remaining hands-on across architecture, sprint delivery, code review, CI/CD, and production operations.",
-    approach: [
-      "Rebuilt delivery workflows around GitHub Actions and Docker.",
-      "Re-architected the public job portal in Next.js with server-side rendering.",
-      "Designed AWS infrastructure using Kubernetes and containerised services.",
-    ],
-    outcomes: [
-      { value: "<20 min", label: "build time, down from 2+ hours" },
-      { value: "500%", label: "organic traffic growth" },
-      { value: "On demand", label: "release capability" },
-    ],
-    tech: ["Next.js", "TypeScript", "Node.js", "AWS", "Docker", "Kubernetes"],
-  },
-  {
-    company: "GIC",
-    title: "Unifying investment applications",
-    role: "Full-Stack Developer · Singapore · 2023–2026",
-    challenge:
-      "Investment and analytics teams relied on separate tools that needed a consistent experience without losing independent deployment ownership.",
-    ownership:
-      "Worked end to end with analysts, designers, and project managers, from technical design through production delivery.",
-    approach: [
-      "Built a React micro-frontend framework for independently deployed applications.",
-      "Developed Python services with Redis caching and role-based access control.",
-      "Translated complex financial workflows into focused internal product experiences.",
-    ],
-    outcomes: [
-      { value: "10+", label: "applications unified" },
-      { value: "30%", label: "faster API responses" },
-      { value: "1 platform", label: "consistent user experience" },
-    ],
-    tech: ["React", "TypeScript", "Python", "Redis", "Micro-frontends", "RBAC"],
-  },
-  {
-    company: "GrabJobs",
-    title: "Scaling traffic, revenue, and reliability",
-    role: "Senior Software Engineer · Singapore · 2019–2020",
-    challenge:
-      "A fast-growing recruitment platform needed to scale web traffic, introduce employer subscriptions, and improve production visibility.",
-    ownership:
-      "Owned senior-level delivery across frontend architecture, service boundaries, billing integration, and operational monitoring.",
-    approach: [
-      "Redesigned the Next.js rendering architecture and moved services out of a growing monolith.",
-      "Built Stripe employer subscriptions, including billing and failed-payment paths.",
-      "Introduced ELK and Prometheus for stronger logging and monitoring.",
-    ],
-    outcomes: [
-      { value: "300%", label: "traffic growth supported" },
-      { value: "50%", label: "revenue increase contributed to" },
-      { value: "20%", label: "less unplanned downtime" },
-    ],
-    tech: ["Next.js", "React", "Node.js", "Stripe", "ELK", "Prometheus"],
-  },
-];
 
 export const projects: Project[] = [
   {
@@ -304,8 +254,7 @@ export const education: Education[] = [
   {
     degree: "Master of Applied Finance",
     school: "Auckland University of Technology (AUT)",
-    period: "Mar 2026 - Jan 2027 (expected)",
-    current: true,
+    period: "Mar 2026 — Jan 2027",
   },
   {
     degree: "MSc Computer Science",
@@ -321,23 +270,25 @@ export const education: Education[] = [
 
 export const blogPosts = [
   {
-    title: "REST vs GraphQL — How to choose your API architecture?",
-    url: "https://blog.yelwinsoe.dev/rest-vs-graphql-how-to-choose-your-api-architecture",
-    excerpt:
-      "A practical breakdown of when to pick REST vs GraphQL, based on real-world tradeoffs I've encountered across multiple products.",
-  },
-  {
     title: "How to protect your API?",
     url: "https://blog.yelwinsoe.dev/how-to-protect-your-api",
+    readTime: "3 min read",
     excerpt:
-      "Security patterns for production APIs — rate limiting, authentication, input validation, and more.",
+      "Lessons from a surprise SMS bill: four rate-limiting approaches for APIs that cost money per call, such as OTP, email, and file uploads.",
+  },
+  {
+    title: "REST vs GraphQL — How to choose your API architecture?",
+    url: "https://blog.yelwinsoe.dev/rest-vs-graphql-how-to-choose-your-api-architecture",
+    readTime: "2 min read",
+    excerpt:
+      "The checklist I use to choose between them: prototype or production, how many clients consume the API, and how complex the authorisation is.",
   },
 ];
 
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#projects" },
+  { label: "Writing", href: "#writing" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
